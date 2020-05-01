@@ -30,9 +30,6 @@
       }
     }
   ],
-  "registryUrls": [
-    "https://nexus.tools.mycooperlsuite.io/repository/maven-group/"
-  ],
   "packageRules": [
     {
       "managers": [
