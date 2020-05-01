@@ -1,0 +1,3 @@
+rootProject.name = 'datawarehouse'
+include 'api'
+include 'e2e-test'

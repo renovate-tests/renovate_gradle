@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "gradle": {
+    "enabled": true
+  },
+  "docker": {
+    "enabled": false
+  },
+  "helmfile": {
+    "enabled": false
+  },
+  "branchPrefix": "dependance/",
+  "baseBranches": [
+    "develop"
+  ],
+  "hostRules": [
+    {
+      "domainName": "nexus.tools.mycooperlsuite.io",
+      "username": "jean-michel.leclercq",
+      "encrypted": {
+        "password": "vHp7CVD5r3jP45zw+P++vR3E6fYr0LyQ5afNAv37v72Oh4bLjvaYNb409RuU11sRJOXpwxkroXNx8DvuyKTqHk6OO3c68DTwSc4hCeADyDy8Mplz0aYYP08vqylqVD40yMuPej5aNrv7423nDRRojM7vlEEOkf0qhyZtRhF8vzRw1YhtlVkXzrNwRjOOk52Zp8Urpdf/NWIzkroQnfYHk9ZpkrGbbXLgS16stkE3bD2BBCT8C+zb/gcbVBnEMK/fjdSKNdzHLMdMrWVzUwubjcPRDHnD6epfZ8EBMdPBdN3JLX2KB9RwIb5kfW/ke3tIu4eMUDPct/gzY4bgxx6low=="
+      }
+    },
+    {
+      "domainName": "github.com",
+      "encrypted": {
+        "token": "EuOK2hLb8FyitP0gdtZ5AVREtkBkWnN/POOHqm3MYuS+yjHQCAu4UVxP2nQsBj8SEi54x+9Db4qTRR1Fdi26MQ1cLaxq436fS+vCYMAwW62EavbLx3WdvDCYBEGSg6QTsLlZEWS8CMMtXGrBsQ9+iuACfwxXq0vRX7qAy7qOZK/u5I+p0cgiG/KHNmH8alky+goK8n9ZrRlofPcQxW4wPf/B/ZEqnRm8vVn6a4mLwkSK2twLlBmOlumKVdjSryTCR4Kc4YAPzgA2JuMsKSB1WBD8igXa7zvKiM8k0jg9lz8lWrJlLK2X8zkzAN6pTvjLuK6XhpAEi2ctJfP+y1sX8w=="
+      }
+    }
+  ],
+  "registryUrls": [
+    "https://nexus.tools.mycooperlsuite.io/repository/maven-group/"
+  ],
+  "packageRules": [
+    {
+      "managers": [
+        "gradle"
+      ],
+      "packagePatterns": [
+        "^com.limark.gitflowsemver"
+      ],
+      "enabled": false
+    }
+  ]
+}
