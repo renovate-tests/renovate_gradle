@@ -23,15 +23,11 @@ sourceSets {
 }
 
 task e2e(type: Test) {
-    // pull karate options into the runtime
     systemProperty "karate.options", System.properties.getProperty("karate.options")
-    // pull karate env into the runtime
     systemProperty "karate.env", System.properties.getProperty("karate.env")
     systemProperty "kube.releaseName", System.properties.getProperty("kube.releaseName")
     systemProperty "kube.namespace", System.properties.getProperty("kube.namespace")
-    // ensure tests are always run
     outputs.upToDateWhen { false }
-    // attach debugger
     if (System.getProperty('debug', 'false') == 'true') {
         jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9009'
     }
