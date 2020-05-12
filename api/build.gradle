@@ -36,7 +36,6 @@ plugins {
     id 'com.google.cloud.tools.jib' version '1.8.0'
 }
 
-apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
